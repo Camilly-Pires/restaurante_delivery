@@ -99,7 +99,7 @@ a {
   border: 3px solid transparent;
   border-radius: 50px;
   outline: none;
-  font-size: 18 px;
+  font-size: 18px;
   background-color: #fdf6ec;
   color: #101010;
   transition: all 0.3s ease;
@@ -288,7 +288,10 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
   /* efeito suave ao passar o mouse */
+  display: flex;
+  flex-direction: column;
 }
+
 
 .card:hover {
   transform: translateY(-6px);
@@ -297,19 +300,19 @@ a {
 
 .card img {
   width: 100%;
-  height: 230px;
+  height: 200px;
   object-fit: cover;
   /* a imagem preenche o espaço sem distorcer */
 }
 
 .card h3 {
-  font-size: 18px;
+  font-size: 22px;
   color: #2e5339;
   margin: 14px 14px 6px;
 }
 
 .card p {
-  font-size: 17px;
+  font-size: 20px;
   color: #090909;
   margin: 0 14px 12px;
 }
@@ -320,6 +323,7 @@ a {
   color: #c96342;
   margin: 0 14px 14px;
   font-size: 18px;
+  margin-top: auto;
 }
 
 /* Estilo aplicado pelo JavaScript quando o cliente clica no card */
@@ -657,70 +661,87 @@ Media queries: ajustam o layout para telas menores === */
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pesquisa-header {
-    margin: 0 12px;
-  }
-
-  #campoPesquisa {
-    max-width: 180px;
-  }
-
-  .menu-nav {
-    gap: 14px;
-    font-size: 16px;
-  }
-
-  .logoNome {
-    font-size: 20px;
-  }
-
   .hero-imagem img {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
   }
 
   .hero-texto h2 {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 
 /* Celulares (telas até 900px, onde entra o hambúrguer) */
 @media (max-width: 900px) {
+  .header {
+    padding: 8px 0;
+  }
+
   .header-conteudo {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    position: relative;
   }
 
   .logo-area {
-    justify-content: center;
+    flex: 0 0 auto;
+    gap: 8px;
     order: initial;
   }
 
   .logo {
-    width: 60px;
+    width: 36px;
+  }
+
+  .logoNome {
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   .pesquisa-header {
-    margin: 0;
-    width: 100%;
+    flex: 999 1 auto;
+    min-width: 0;
+    margin: 0 10px;
     order: initial;
+  }
+
+  #campoPesquisa {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 12px;
+    font-size: 13px;
   }
 
   nav {
     order: initial;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2e5339;
+    z-index: 999;
   }
 
   .header-mobile-controles {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     order: initial;
   }
 
   .sacola-icone {
     top: 0;
     right: 0;
+  }
+
+  .sacola-icone img {
+    width: 28px;
+    height: 28px;
   }
 
   .menu-nav {
@@ -743,7 +764,7 @@ Media queries: ajustam o layout para telas menores === */
   }
 
   .grade-cardapio {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
