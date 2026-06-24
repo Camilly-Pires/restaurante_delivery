@@ -1,0 +1,748 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES GERAIS DO SITE */
+body {
+  font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+  color: #2f2f2f;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Classe usada para centralizar o conteúdo e limitar a largura */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2e5339;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===BOTÕES==== */
+.botao {
+  display: inline-block;
+  background-color: #c96342;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background-color: #a14e33;
+  /* Efeito mais escuro */
+}
+
+.botao-claro {
+  background-color: #fff;
+  color: #2e5339;
+}
+
+.botao-claro:hover {
+  background-color: #eaeaea;
+}
+
+/* === HEADER (logo + menu) === */
+.header {
+  background-color: #2e5339;
+  padding: 16px 0;
+}
+
+.header-conteudo {
+  /* FLEXBOX: organiza logo e menu lado a lado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logoNome {
+  color: #fff;
+  font-size: 25px;
+}
+
+.pesquisa-header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+#campoPesquisa {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 18px;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  outline: none;
+  font-size: 18 px;
+  background-color: #fdf6ec;
+  color: #101010;
+  transition: all 0.3s ease;
+}
+
+
+/* Quando o cliente clica/seleciona o campo */
+#campoPesquisa:focus {
+  border-color: #f6ad03;
+  /* amarelo dourado do tema, dá destaque */
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(242, 193, 78, 0.3);
+  /* brilho suave ao redor */
+}
+
+/* Estiliza o placeholder */
+#campoPesquisa::placeholder {
+  color: #999;
+}
+
+/* Coloca os itens do menu em linha, um ao lado do outro */
+.menu-nav {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  font-size: 20px;
+}
+
+.menu-nav a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-nav a:hover {
+  color: #f2c14e;
+  /* amarelo dourado de destaque */
+}
+
+/* =========================================
+   MENU HAMBÚRGUER (celular)
+========================================= */
+
+/* Escondido por padrão (só aparece no celular, via media query) */
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-hamburguer span {
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* No celular: mostra o botão e esconde o menu por padrão */
+@media (max-width: 600px) {
+  .menu-hamburguer {
+    display: flex;
+  }
+
+  nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* Quando o JavaScript adicionar essa classe, o menu aparece */
+  nav.aberto {
+    max-height: 200px;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+  }
+}
+
+/* === HERO (seção principal/banner) === */
+.hero {
+  background-color: #f7d27d;
+  padding: 80px 20px;
+}
+
+.hero-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-texto {
+  flex: 1;
+  /* ocupa o espaço disponível */
+  text-align: left;
+  font-size: 18px;
+
+}
+
+.hero-texto h2 {
+  font-size: 35px;
+  color: #2e5339;
+  text-align: left;
+}
+
+.hero-texto p {
+  font-size: 22px;
+  margin: 16px 0 28px;
+}
+
+.hero-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-imagem img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* deixa a imagem redonda */
+
+  /* Animação de flutuar */
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+/* Define os "passos" da animação: sobe e desce */
+@keyframes flutuar {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* === SOBRE === */
+.sobre {
+  padding: 60px 0;
+  text-align: center;
+  border: 2px solid #2e5339;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 19px;
+}
+
+/* === CARDÁPIO (pratos e sobremesas) ==== */
+.cardapio {
+  padding: 60px 0;
+  background-color: #fdf6ec;
+  /* tom claro, parece e suave */
+}
+
+.cardapio-sobremesas {
+  background-color: #fff;
+  /* cor diferente pra separar visualmente das comidas */
+}
+
+.grade-cardapio {
+  /* GRID: organiza os cards em colunas automáticas */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  /* efeito suave ao passar o mouse */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  /* "levanta" o card ao passar o mouse */
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  /* a imagem preenche o espaço sem distorcer */
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #2e5339;
+  margin: 14px 14px 6px;
+}
+
+.card p {
+  font-size: 17px;
+  color: #090909;
+  margin: 0 14px 12px;
+}
+
+.preco {
+  display: block;
+  font-weight: bold;
+  color: #c96342;
+  margin: 0 14px 14px;
+  font-size: 18px;
+}
+
+/* Estilo aplicado pelo JavaScript quando o cliente clica no card */
+.card.selecionado {
+  border: 3px solid #2e5339;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* === MODAL DE DETALHES DO PRATO === */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.aberto {
+  display: flex;
+}
+
+.modal-conteudo {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+}
+
+.modal-conteudo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  color: #050505;
+}
+
+.modal-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.modal-quantidade button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #2e5339;
+  background-color: #fff;
+  color: #2e5339;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-quantidade button:hover {
+  background-color: #2e5339;
+  color: #fff;
+}
+
+#quantidade-atual {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 24px;
+}
+
+.botao-sacola {
+  width: 100%;
+  font-size: 17px;
+}
+
+.card-clicavel {
+  cursor: pointer;
+}
+
+
+/* === PÁGINA DO SACOLA ===*/
+.pagina-sacola {
+  padding: 60px 0;
+  min-height: 60vh;
+}
+
+.item-sacola {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+.item-sacola img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-sacola-info {
+  flex: 1;
+}
+
+.item-sacola-info h3 {
+  color: #2e5339;
+  font-size: 22px;
+}
+
+.item-sacola-info p {
+  font-size: 20px;
+  color: #040404;
+
+}
+
+.item-sacola-remover {
+  background-color: #c96342;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.item-sacola-remover:hover {
+  background-color: #a14e33;
+}
+
+.sacola-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #2e5339;
+}
+
+.sacola-total span {
+  color: #c96342;
+  font-weight: bold;
+}
+
+
+.sacola-icone {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  top: -5px;
+  right: -15px;
+}
+
+.sacola-icone img {
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+}
+
+.sacola-contador {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #f0521e;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-sacola-menos,
+.item-sacola-mais {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #2e5339;
+  background-color: #fff;
+  color: #2e5339;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.item-sacola-menos:hover,
+.item-sacola-mais:hover {
+  background-color: #2e5339;
+  color: #fff;
+}
+
+/* Ajusta a mensagem de sacola vazia: centralizada e com mais destaque */
+
+.sacola-vazia {
+  text-align: center;
+  font-size: 22px;
+  color: #030303;
+  padding: 60px 20px;
+}
+
+.sacola-vazia a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2e5339;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Esconde a busca só na página da sacola, mas mantém o espaço reservado */
+.pagina-sacola-body .pesquisa-header {
+  visibility: hidden;
+}
+
+
+/* === CTA (chamada para ação final)=== */
+
+.cta {
+  background-color: #2e5339;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 20px;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 30px;
+}
+
+/* =========================================
+   BENEFÍCIOS / DIFERENCIAIS
+========================================= */
+.beneficios {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.grade-beneficios {
+  /* GRID: organiza os cards em colunas automáticas */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card-beneficio {
+  background-color: #fdf6ec;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card-beneficio:hover {
+  transform: translateY(-6px);
+}
+
+.card-beneficio-icone {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.card-beneficio h3 {
+  color: #2e5339;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card-beneficio p {
+  color: #030303;
+  font-size: 17px;
+}
+
+/* Responsividade dos benefícios */
+@media (max-width: 900px) {
+  .grade-beneficios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grade-beneficios {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === FOOTER (rodapé) === */
+
+.footer {
+  background-color: #1f3b29;
+  color: #ddd;
+  text-align: center;
+  padding: 40px;
+  margin-top: auto;
+}
+
+.footer p {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+/* === RESPONSIVIDADE
+Media queries: ajustam o layout para telas menores === */
+
+/* =========================================
+   RESPONSIVIDADE
+   Media queries: ajustam o layout para telas menores
+========================================= */
+
+/* Tablets (telas até 900px) */
+
+@media (max-width: 900px) {
+  .grade-cardapio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pesquisa-header {
+    margin: 0 12px;
+  }
+
+  #campoPesquisa {
+    max-width: 180px;
+  }
+
+  .menu-nav {
+    gap: 14px;
+    font-size: 16px;
+  }
+
+  .logoNome {
+    font-size: 20px;
+  }
+}
+
+/* Celulares (telas até 600px) */
+@media (max-width: 600px) {
+  .header-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-area {
+    justify-content: center;
+    order: initial;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .pesquisa-header {
+    margin: 0;
+    width: 100%;
+    order: initial;
+  }
+
+  nav {
+    order: initial;
+  }
+
+  .header-mobile-controles {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    order: initial;
+  }
+
+  .sacola-icone {
+    top: 0;
+    right: 0;
+  }
+
+  .menu-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .grade-cardapio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ordena os elementos do header no desktop: logo, busca, menu, sacola */
+.logo-area {
+  order: 1;
+}
+
+.pesquisa-header {
+  order: 2;
+}
+
+nav {
+  order: 3;
+}
+
+.header-mobile-controles {
+  order: 4;
+}

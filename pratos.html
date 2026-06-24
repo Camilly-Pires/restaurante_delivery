@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pratos</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-conteudo">
+            <div class="logo-area">
+                <img class="logo" src="icons/logo.png" alt="logo">
+                <h1 class="logoNome">Brasa Nobre</h1>
+            </div>
+
+            <div class="pesquisa-header">
+                <input id="campoPesquisa" type="text" placeholder="Pesquisar pratos...">
+            </div>
+
+            <!-- Botão hambúrguer (só aparece no celular) -->
+            <div class="header-mobile-controles">
+                <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="sacola.html" class="sacola-icone">
+                    <img src="icons/sacola.png" alt="Sacola">
+                    <span class="sacola-contador" id="sacola-contador">0</span>
+                </a>
+            </div>
+
+            <nav id="menuNav">
+                <ul class="menu-nav">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pratos.html">Pratos</a></li>
+                    <li><a href="sobremesas.html">Sobremesas</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section id="pratos" class="cardapio">
+        <div class="container">
+            <h2>Nossos pratos</h2>
+
+            <!-- Cada prato é um "card" (cartão) com imagem, nome, descrição e preço -->
+            <div class="grade-cardapio">
+
+                <div class="card card-clicavel" data-titulo="Camarão na Moranga Revisitado"
+                    data-descricao="Camarões ao creme, servidos dentro de uma moranga assada." data-preco="58.90"
+                    data-imagem="comidas/Camarão na moranga revisitado.jpg">
+                    <img src="comidas/Camarão na moranga revisitado.jpg" alt="Camarão na moranga">
+                    <h3>Camarão na Moranga Revisitado</h3>
+                    <p>Camarões ao creme, servidos dentro de uma moranga assada.</p>
+                    <span class="preco">R$ 58.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Misto de Frutos do Mar Grelhados"
+                    data-descricao="Seleção de camarões, polvo e peixe grelhados na brasa." data-preco="64.90"
+                    data-imagem="comidas/Misto de frutos do mar grelhados.jpg">
+                    <img src="comidas/Misto de frutos do mar grelhados.jpg" alt="Frutos do mar grelhados">
+                    <h3>Misto de Frutos do Mar Grelhados</h3>
+                    <p>Seleção de camarões, polvo e peixe grelhados na brasa.</p>
+                    <span class="preco">R$ 35.70</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Polvo Brasileiro"
+                    data-descricao="Polvo grelhado sobre cuscuz de tapioca com farofa crocante." data-preco="62.90"
+                    data-imagem="comidas/Polvo brasileiro.jpg">
+                    <img src="comidas/Polvo brasileiro.jpg" alt="Polvo brasileiro">
+                    <h3>Polvo Brasileiro</h3>
+                    <p>Polvo grelhado sobre cuscuz de tapioca com farofa crocante.</p>
+                    <span class="preco">R$ 32.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Risoto de Carne de Sol"
+                    data-descricao="Risoto cremoso com carne de sol desfiada e queijo coalho." data-preco="47.90"
+                    data-imagem="comidas/Risoto de carne de sol.jpg">
+                    <img src="comidas/Risoto de carne de sol.jpg" alt="Risoto de carne de sol">
+                    <h3>Risoto de Carne de Sol</h3>
+                    <p>Risoto cremoso com carne de sol desfiada e queijo coalho.</p>
+                    <span class="preco">R$ 40.80</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Moqueca Brasileira Contemporânea"
+                    data-descricao="Moqueca de peixe com leite de coco, dendê e pimentões." data-preco="55.90"
+                    data-imagem="comidas/Moqueca Brasileira Contemporânea.jpg">
+                    <img src="comidas/Moqueca Brasileira Contemporânea.jpg" alt="Moqueca brasileira">
+                    <h3>Moqueca Brasileira Contemporânea</h3>
+                    <p>Moqueca de peixe com leite de coco, dendê e pimentões.</p>
+                    <span class="preco">R$ 45.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Vatapá"
+                    data-descricao="Frango grelhado com legumes da estação e redução especial." data-preco="46.90"
+                    data-imagem="comidas/vatapa.png">
+                    <img src="comidas/vatapa.png" alt="vatapa">
+                    <h3>Vatapá</h3>
+                    <p>O Vatapá possui uma variedade de preparo com farinha, fubá, gengibre ou camarões.</p>
+                    <span class="preco">R$ 25.90</span>
+                </div>
+
+
+                <div class="card card-clicavel" data-titulo="Leitão à Pururuca Revisitado"
+                    data-descricao="Cubos de leitão crocante e suculento, servidos com redução de molho especial e ervas frescas."
+                    data-preco="55.90" data-imagem="comidas/leitaopururuca.jpeg">
+                    <img src="comidas/leitaopururuca.jpeg" alt="Leitão a Pururuca">
+                    <h3>Leitão à Pururuca Revisitado</h3>
+                    <p>Cubos de leitão crocante e suculento, servidos com redução de molho especial e ervas frescas.</p>
+                    <span class="preco">R$ 37.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Feijoada"
+                    data-descricao="Feijoada, com couve fininha, farofa, vinagrete e torresmo crocante."
+                    data-preco="58.90" data-imagem="comidas/feijoadacontemporanea.jpeg">
+                    <img src="comidas/feijoadacontemporanea.jpeg" alt="Feijoada">
+                    <h3>Feijoada</h3>
+                    <p>Feijoada, com couve fininha, farofa, vinagrete e torresmo crocante.</p>
+                    <span class="preco">R$ 32.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Picadinho Brasileiro"
+                    data-descricao="Picadinha companhado de arroz branco, farofa rica, couve refogada e bananas grelhadas."
+                    data-preco="40.70" data-imagem="comidas/picadinhobrasileiro.jpeg">
+                    <img src="comidas/picadinhobrasileiro.jpeg" alt="Picadinho Brasileiro">
+                    <h3>Picadinho Brasileiro</h3>
+                    <p>Picadinha companhado de arroz branco, farofa rica, couve refogada e bananas grelhadas.</p>
+                    <span class="preco">R$ 28.70</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Carne de Sol"
+                    data-descricao="Acompanhada de macaxeira cozida, manteiga de garrafa e pimenta-biquinho."
+                    data-preco="52.50" data-imagem="comidas/carnedeSol.jpeg">
+                    <img src="comidas/carnedeSol.jpeg" alt="Carne de Sol">
+                    <h3>Carne de Sol</h3>
+                    <p>Acompanhada de macaxeira cozida, manteiga de garrafa e pimenta-biquinho.</p>
+                    <span class="preco">R$ 52.50</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Barreado Paraense"
+                    data-descricao="Carne cozida e desfiada, com um aveludado caldo de tucupi e farofa de maniçoba."
+                    data-preco="42.50" data-imagem="comidas/barreadoParaense.jpeg">
+                    <img src="comidas/barreadoParaense.jpeg" alt="Barreado Paraense">
+                    <h3>Barreado Paraense</h3>
+                    <p>Carne cozida e desfiada, com um aveludado caldo de tucupi e farofa de maniçoba.</p>
+                    <span class="preco">R$ 42.50</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Bobó de Camarão"
+                    data-descricao="Camarões com creme de mandioca, leite de coco e azeite de dendê." data-preco="68.90"
+                    data-imagem="comidas/bodoCamarao.jpeg">
+                    <img src="comidas/bodoCamarao.jpeg" alt="Bobó de Camarão">
+                    <h3>Bobó de Camarão</h3>
+                    <p>Camarões com creme de mandioca, leite de coco e azeite de dendê.</p>
+                    <span class="preco">R$ 68.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Galinha Gourmet"
+                    data-descricao="Galinha ao molho espesso com arroz, finalizada com telhas crocantes e brotos frescos."
+                    data-preco="46.90" data-imagem="comidas/galinhaGourmet.jpeg">
+                    <img src="comidas/galinhaGourmet.jpeg" alt="Galinha Gourmet">
+                    <h3>Galinha Gourmet</h3>
+                    <p>Galinha ao molho espesso com arroz, finalizada com telhas crocantes e brotos frescos.</p>
+                    <span class="preco">R$ 40.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Arroz de Pato Brasileiro"
+                    data-descricao="Arroz com pato desfiado, pedaços de linguiça defumada e cenoura." data-preco="35.50"
+                    data-imagem="comidas/arrozdepatobrasileiro.jpeg">
+                    <img src="comidas/arrozdepatobrasileiro.jpeg" alt="Arroz de Pato Brasileiro">
+                    <h3>Arroz de Pato Brasileiro</h3>
+                    <p>Arroz com pato desfiado, pedaços de linguiça defumada e cenoura.</p>
+                    <span class="preco">R$ 30.50</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Filé Mignon"
+                    data-descricao="Filé mignon grelhado, acompanhado de purê de batatas." data-preco="72.50"
+                    data-imagem="comidas/fileMigno.jpeg">
+                    <img src="comidas/fileMigno.jpeg" alt="Filé Mignon">
+                    <h3>Filé Mignon</h3>
+                    <p>Filé mignon grelhado, acompanhado de purê de batatas.</p>
+                    <span class="preco">R$ 72.50</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Moqueca Baiana"
+                    data-descricao="Cozido de peixe fresco com azeite de dendê, leite de coco, pimentões e coentro."
+                    data-preco="51.80" data-imagem="comidas/moquecaBaiana.jpeg">
+                    <img src="comidas/moquecaBaiana.jpeg" alt="Moqueca Baiana">
+                    <h3>Moqueca Baiana</h3>
+                    <p>Cozido de peixe fresco com azeite de dendê, leite de coco, pimentões e coentro.</p>
+                    <span class="preco">R$ 39.80</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Escondidinho de Costela"
+                    data-descricao="Costela bovina, com creme de mandioca, quiabos tostados e brotos frescos."
+                    data-preco="52.80" data-imagem="comidas/escondidinhodecostela.jpeg">
+                    <img src="comidas/escondidinhodecostela.jpeg" alt="Escondidinho de Costela">
+                    <h3>Escondidinho de Costela</h3>
+                    <p>Costela bovina, com creme de mandioca, quiabos tostados e brotos frescos.</p>
+                    <span class="preco">R$ 52.80</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Baião de Dois"
+                    data-descricao="Tradicional baião, com carne de sol, bacon e cubos de linguiça." data-preco="33.40"
+                    data-imagem="comidas/baiaodedois.jpeg">
+                    <img src="comidas/baiaodedois.jpeg" alt="Baião de Dois">
+                    <h3>Baião de Dois</h3>
+                    <p>Tradicional baião, com carne de sol, bacon e cubos de linguiça.</p>
+                    <span class="preco">R$ 22.40</span>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modal-prato">
+        <div class="modal-conteudo">
+
+            <button class="modal-fechar" id="modal-fechar">×</button>
+
+            <img id="modal-imagem" src="" alt="">
+
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+            <span class="preco" id="modal-preco"></span>
+
+            <div class="modal-quantidade">
+                <button id="btn-menos">−</button>
+                <span id="quantidade-atual">1</span>
+                <button id="btn-mais">+</button>
+            </div>
+
+            <button class="botao botao-sacola" id="btn-adicionar-sacola">
+                Adicionar aos Pedidos
+            </button>
+
+        </div>
+    </div>
+
+    <footer id="contato" class="footer">
+        <div class="container">
+            <p>📞 (92) 999788-7895</p>
+            <p>📍 Rua das Palmeiras, 123 - Centro</p>
+            <p>&copy; 2026 Sabor Brasileiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

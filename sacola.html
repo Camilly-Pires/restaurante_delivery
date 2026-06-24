@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-sacola-body">
+
+
+    <header class="header">
+        <div class="container header-conteudo">
+            <div class="logo-area">
+                <img class="logo" src="icons/logo.png" alt="logo">
+                <h1 class="logoNome">Brasa Nobre</h1>
+            </div>
+
+            <div class="pesquisa-header">
+                <input id="campoPesquisa" type="text" placeholder="Pesquisar pratos...">
+            </div>
+
+            <!-- Botão hambúrguer (só aparece no celular) -->
+            <div class="header-mobile-controles">
+                <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="sacola.html" class="sacola-icone">
+                    <img src="icons/sacola.png" alt="Sacola">
+                    <span class="sacola-contador" id="sacola-contador">0</span>
+                </a>
+            </div>
+
+            <nav id="menuNav">
+                <ul class="menu-nav">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pratos.html">Pratos</a></li>
+                    <li><a href="sobremesas.html">Sobremesas</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ===================================== -->
+    <!-- PÁGINA DA SACOLA/CARRINHO              -->
+    <!-- ===================================== -->
+    <section class="pagina-sacola">
+        <div class="container">
+            <h2>Pedidos</h2>
+
+            <!-- O JavaScript vai desenhar os itens aqui dentro -->
+            <div id="lista-sacola"></div>
+
+            <!-- Aparece só se a sacola estiver vazia -->
+            <p id="sacola-vazia" class="sacola-vazia" style="display: none;">
+                A sacola está vazia. <a href="index.html">Voltar ao cardápio</a>
+            </p>
+
+            <div class="sacola-total">
+                <strong>Total:</strong>
+                <span id="sacola-total-valor">R$ 0,00</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="footer">
+        <div class="container">
+            <p>📞 (92) 999788-7895</p>
+            <p>📍 Rua das Palmeiras, 123 - Centro</p>
+            <p>&copy; 2026 Sabor Brasileiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="sacola.js"></script>
+
+
+</body>
+
+</html>

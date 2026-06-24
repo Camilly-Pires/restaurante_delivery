@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sobremesas</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-conteudo">
+            <div class="logo-area">
+                <img class="logo" src="icons/logo.png" alt="logo">
+                <h1 class="logoNome">Brasa Nobre</h1>
+            </div>
+
+            <div class="pesquisa-header">
+                <input id="campoPesquisa" type="text" placeholder="Pesquisar pratos...">
+            </div>
+
+            <!-- Botão hambúrguer (só aparece no celular) -->
+            <div class="header-mobile-controles">
+                <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="sacola.html" class="sacola-icone">
+                    <img src="icons/sacola.png" alt="Sacola">
+                    <span class="sacola-contador" id="sacola-contador">0</span>
+                </a>
+            </div>
+
+
+            <nav id="menuNav">
+                <ul class="menu-nav">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pratos.html">Pratos</a></li>
+                    <li><a href="sobremesas.html">Sobremesas</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <section id="pratos" class="cardapio">
+        <div class="container">
+            <h2>Nossos pratos</h2>
+
+            <!-- Cada sobremesa é um "card" (cartão) com imagem, nome, descrição e preço -->
+            <div class="grade-cardapio">
+
+                <div class="card card-clicavel" data-titulo="Tiramisù Italiano"
+                    data-descricao="Camadas de café, mascarpone e cacau em copinho individual." data-preco="19.90"
+                    data-imagem="sobremesas/Tiramisu Italiano.jpg">
+                    <img src="sobremesas/Tiramisu Italiano.jpg" alt="Tiramisù Italiano">
+                    <h3>Tiramisù Italiano</h3>
+                    <p>Camadas de café, mascarpone e cacau em copinho individual.</p>
+                    <span class="preco">R$ 19.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Quindim Dourado"
+                    data-descricao="Doce brasileiro à base de gemas, açúcar e coco ralado fresco." data-preco="18.90"
+                    data-imagem="sobremesas/quindim.jpeg">
+                    <img src="sobremesas/quindim.jpeg" alt="Quindim Dourado">
+                    <h3>Quindim Dourado</h3>
+                    <p>Doce brasileiro à base de gemas, açúcar e coco ralado fresco.</p>
+                    <span class="preco">R$ 15.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Paçoca Cremosa"
+                    data-descricao="Sobremesa de amendoim, com paçoca artesanal esfarelada." data-preco="16.90"
+                    data-imagem="sobremesas/paçocacremosa.jpeg">
+                    <img src="sobremesas/paçocacremosa.jpeg" alt="Paçoca Cremosa">
+                    <h3>Paçoca Cremosa</h3>
+                    <p>Sobremesa de amendoim, com paçoca artesanal esfarelada.</p>
+                    <span class="preco">R$ 12.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Doce de Abóbora com Coco"
+                    data-descricao="Tradicional doce de abóbora e fitas de coco fresco." data-preco="14.90"
+                    data-imagem="sobremesas/docedeabóbora.jpeg">
+                    <img src="sobremesas/docedeabóbora.jpeg" alt="Doce de Abóbora">
+                    <h3>Doce de Abóbora com Coco</h3>
+                    <p>Tradicional doce de abóbora e fitas de coco fresco.</p>
+                    <span class="preco">R$ 14.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Curau de Milho Tradicional"
+                    data-descricao="Creme suave e cremoso de milho verde com pitada de canela em pó." data-preco="15.90"
+                    data-imagem="sobremesas/curaudemilho.jpeg">
+                    <img src="sobremesas/curaudemilho.jpeg" alt="Curau de Milho Verde">
+                    <h3>Curau de Milho Tradicional</h3>
+                    <p>Creme suave e cremoso de milho verde com pitada de canela em pó.</p>
+                    <span class="preco">R$ 14.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Doce de Abacaxi com Coco"
+                    data-descricao="Servido no copo com borda polvilhada de coco ralado e um toque de hortelã."
+                    data-preco="17.90" data-imagem="sobremesas/docedeabacaxi.jpeg">
+                    <img src="sobremesas/docedeabacaxi.jpeg" alt="Doce de Abacaxi com Coco">
+                    <h3>Doce de Abacaxi com Coco</h3>
+                    <p>Servido no copo com borda polvilhada de coco ralado e um toque de hortelã.</p>
+                    <span class="preco">R$ 12.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Romeu e Julieta"
+                    data-descricao="Fatias de queijo coalho com goiabada cascão artesanal." data-preco="19.90"
+                    data-imagem="sobremesas/romeuejulieta.jpeg">
+                    <img src="sobremesas/romeuejulieta.jpeg" alt="Romeu e Julieta">
+                    <h3>Romeu e Julieta</h3>
+                    <p>Fatias de queijo coalho com goiabada cascão artesanal.</p>
+                    <span class="preco">R$ 10.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Bolo de Rolo Tradicional"
+                    data-descricao="Com camadas finas de massa de pão de ló, recheado com goiabada derretida."
+                    data-preco="22.90" data-imagem="sobremesas/boloderolo.jpeg">
+                    <img src="sobremesas/boloderolo.jpeg" alt="Bolo de Rolo">
+                    <h3>Bolo de Rolo Tradicional</h3>
+                    <p>Com camadas finas de massa de pão de ló, recheado com goiabada derretida.</p>
+                    <span class="preco">R$ 18.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Brigadeiro Gourmet"
+                    data-descricao="Brigadeiros artesanais feitos com cacau nobre e finalizados com granulados belgas."
+                    data-preco="12.90" data-imagem="sobremesas/brigadeirogourmet.jpeg">
+                    <img src="sobremesas/brigadeirogourmet.jpeg" alt="Brigadeiro Gourmet">
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>Brigadeiros artesanais feitos com cacau nobre e finalizados com granulados belgas.</p>
+                    <span class="preco">R$ 12.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Cartola Pernambucana"
+                    data-descricao="Com bananas grelhadas, acompanhadas de morangos e salpicadas com açúcar e canela."
+                    data-preco="24.90" data-imagem="sobremesas/cartolapernambucana.jpeg">
+                    <img src="sobremesas/cartolapernambucana.jpeg" alt="Cartola Tradicional">
+                    <h3>Cartola Pernambucana</h3>
+                    <p>Com bananas grelhadas, acompanhadas de morangos e salpicadas com açúcar e canela.</p>
+                    <span class="preco">R$ 24.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Cocada Cremosa"
+                    data-descricao="Cocada artesanal feita com coco ralado fresco em fitas com textura super cremosa."
+                    data-preco="15.90" data-imagem="sobremesas/cocadacremosa.jpeg">
+                    <img src="sobremesas/cocadacremosa.jpeg" alt="Cocada Cremosa">
+                    <h3>Cocada Cremosa</h3>
+                    <p>Cocada artesanal feita com coco ralado fresco em fitas com textura super cremosa.</p>
+                    <span class="preco">R$ 11.90</span>
+                </div>
+
+                <div class="card card-clicavel" data-titulo="Pudim de Leite Condensado"
+                    data-descricao="Pudim de leite com uma calda dourada de caramelo artesanal." data-preco="14.90"
+                    data-imagem="sobremesas/pudimdeleite.jpeg">
+                    <img src="sobremesas/pudimdeleite.jpeg" alt="Pudim de Leite">
+                    <h3>Pudim de Leite Condensado</h3>
+                    <p>Pudim de leite com uma calda dourada de caramelo artesanal.</p>
+                    <span class="preco">R$ 14.90</span>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modal-prato">
+        <div class="modal-conteudo">
+
+            <button class="modal-fechar" id="modal-fechar">×</button>
+
+            <img id="modal-imagem" src="" alt="">
+
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+            <span class="preco" id="modal-preco"></span>
+
+            <div class="modal-quantidade">
+                <button id="btn-menos">−</button>
+                <span id="quantidade-atual">1</span>
+                <button id="btn-mais">+</button>
+            </div>
+
+            <button class="botao botao-sacola" id="btn-adicionar-sacola">
+                Adicionar aos Pedidos
+
+            </button>
+
+        </div>
+    </div>
+
+    <footer id="contato" class="footer">
+        <div class="container">
+            <p>📞 (92) 999788-7895</p>
+            <p>📍 Rua das Palmeiras, 123 - Centro</p>
+            <p>&copy; 2026 Sabor Brasileiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

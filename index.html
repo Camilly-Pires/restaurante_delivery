@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brasa Nobre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-conteudo">
+      <div class="logo-area">
+        <img class="logo" src="icons/logo.png" alt="logo">
+        <h1 class="logoNome">Brasa Nobre</h1>
+      </div>
+
+      <div class="pesquisa-header">
+        <input id="campoPesquisa" type="text">
+      </div>
+
+      <!-- Botão icone (só aparece no celular) -->
+      <div class="header-mobile-controles">
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="sacola.html" class="sacola-icone">
+          <img src="icons/sacola.png" alt="Sacola">
+          <span class="sacola-contador" id="sacola-contador">0</span>
+        </a>
+      </div>
+
+
+      <nav id="menuNav">
+        <ul class="menu-nav">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="pratos.html">Pratos</a></li>
+          <li><a href="sobremesas.html">Sobremesas</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- SEÇÃO PRINCIPAL (HERO / BANNER) -->
+  <section class="hero">
+    <div class="container hero-conteudo">
+
+      <div class="hero-texto">
+        <h2>Sabores do Brasil, direto na sua casa</h2>
+        <p>Pratos típicos e sobremesas artesanais, feitos com carinho e entregues bem quentinhos.</p>
+        <a href="#pratos" class="botao">Ver Cardápio</a>
+      </div>
+
+      <div class="hero-imagem">
+        <img src="comidas/banner.png" alt="Tambaqui na Brasa">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PRATOS (COMIDA)-->
+  <section id="pratos" class="cardapio">
+    <div class="container">
+      <h2>Pratos do dia</h2>
+
+      <!-- Cada prato é um "card" (cartão) com imagem, nome, descrição e preço -->
+      <div class="grade-cardapio">
+
+        <div class="card card-clicavel" data-titulo="Feijoada Clássica"
+          data-descricao="Feijão preto com carnes nobres, acompanhado de arroz e laranja." data-preco="39.90"
+          data-imagem="comidas/Feijoada classica.jpg">
+          <img src="comidas/Feijoada classica.jpg" alt="Feijoada Clássica">
+          <h3>Feijoada Clássica</h3>
+          <p>Feijão preto com carnes nobres, acompanhado de arroz e laranja.</p>
+          <span class="preco">R$ 39.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Costela na Baixa Temperatura"
+          data-descricao="Costela bovina cozida lentamente por horas, supermacia." data-preco="54.90"
+          data-imagem="comidas/Costela Bovina na baixa temperatura.jpg">
+          <img src="comidas/Costela Bovina na baixa temperatura.jpg" alt="Costela Bovina">
+          <h3>Costela na Baixa Temperatura</h3>
+          <p>Costela bovina cozida lentamente por horas, supermacia.</p>
+          <span class="preco">R$ 54.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Costela 12 Horas com Creme de Macaxeira"
+          data-descricao="Costela desfiando ao toque, sobre um cremoso purê de macaxeira." data-preco="57.90"
+          data-imagem="comidas/Costela 12 Horas com Creme de Macaxeira.jpg">
+          <img src="comidas/Costela 12 Horas com Creme de Macaxeira.jpg" alt="Costela com creme de macaxeira">
+          <h3>Costela 12 Horas com Creme de Macaxeira</h3>
+          <p>Costela desfiando ao toque, sobre um cremoso purê de macaxeira.</p>
+          <span class="preco">R$ 57.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Filé de Pirarucu Amazônico"
+          data-descricao="Peixe típico da região amazônica, grelhado com legumes." data-preco="49.90"
+          data-imagem="comidas/Filé de Pirarucu Amazônico.jpg">
+          <img src="comidas/Filé de Pirarucu Amazônico.jpg" alt="Filé de Pirarucu">
+          <h3>Filé de Pirarucu Amazônico</h3>
+          <p>Peixe típico da região amazônica, grelhado com legumes.</p>
+          <span class="preco">R$ 40.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Tambaqui Real na Brasa"
+          data-descricao="Peixe tambaqui grelhado, acompanhado de arroz, feijão e farofa." data-preco="52.90"
+          data-imagem="comidas/Tambaqui Real na Brasa.jpg">
+          <img src="comidas/Tambaqui Real na Brasa.jpg" alt="Tambaqui na brasa">
+          <h3>Tambaqui Real na Brasa</h3>
+          <p>Peixe tambaqui grelhado, acompanhado de arroz, feijão e farofa.</p>
+          <span class="preco">R$ 52.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Tilápia Grelhada ao Molho"
+          data-descricao="Filé de peixe tilápia grelhado com molho especial da casa." data-preco="42.90"
+          data-imagem="comidas/Tilapia grelhada ao molho.jpg">
+          <img src="comidas/Tilapia grelhada ao molho.jpg" alt="Tilápia grelhada">
+          <h3>Tilápia Grelhada ao Molho</h3>
+          <p>Filé de peixe tilápia grelhado com molho especial da casa.</p>
+          <span class="preco">R$ 32.90</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE SOBREMESAS -->
+  <section id="sobremesas" class="cardapio cardapio-sobremesas">
+    <div class="container">
+      <h2>Sobremesas do dia</h2>
+
+      <div class="grade-cardapio">
+
+        <div class="card card-clicavel" data-titulo="Brownie de Castanha-do-Pará"
+          data-descricao="Brownie quentinho com calda de chocolate e sorvete." data-preco="22.90"
+          data-imagem="sobremesas/Brownie de Castanha-do-Pará.jpg">
+          <img src="sobremesas/Brownie de Castanha-do-Pará.jpg" alt="Brownie de castanha-do-pará">
+          <h3>Brownie de Castanha-do-Pará</h3>
+          <p>Brownie quentinho com calda de chocolate e sorvete.</p>
+          <span class="preco">R$ 18.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Petit Gâteau"
+          data-descricao="Bolinho de chocolate com centro derretido e sorvete de creme." data-preco="24.90"
+          data-imagem="sobremesas/Petit Gâteau.jpg">
+          <img src="sobremesas/Petit Gâteau.jpg" alt="Petit Gâteau">
+          <h3>Petit Gâteau</h3>
+          <p>Bolinho de chocolate com centro derretido e sorvete de creme.</p>
+          <span class="preco">R$ 24.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Cheesecake Amazônico"
+          data-descricao="Cheesecake cremoso com calda de frutas regionais." data-preco="21.90"
+          data-imagem="sobremesas/Cheesecake Amazônico.jpg">
+          <img src="sobremesas/Cheesecake Amazônico.jpg" alt="Cheesecake Amazônico">
+          <h3>Cheesecake Amazônico</h3>
+          <p>Cheesecake cremoso com calda de frutas regionais.</p>
+          <span class="preco">R$ 15.90</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Cheesecake de Frutas Vermelhas"
+          data-descricao="Cheesecake individual coberto com calda de frutas vermelhas." data-preco="21.90"
+          data-imagem="sobremesas/Cheesecake de Frutas Vermelhas.jpg">
+          <img src="sobremesas/Cheesecake de Frutas Vermelhas.jpg" alt="Cheesecake de frutas vermelhas">
+          <h3>Cheesecake de Frutas Vermelhas</h3>
+          <p>Cheesecake individual coberto com calda de frutas vermelhas.</p>
+          <span class="preco">R$ 18.50</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Mousse de Cupuaçu"
+          data-descricao="Mousse leve e cremoso feito com cupuaçu, fruta amazônica." data-preco="18.90"
+          data-imagem="sobremesas/Mousse de Cupuaçu.jpg">
+          <img src="sobremesas/Mousse de Cupuaçu.jpg" alt="Mousse de cupuaçu">
+          <h3>Mousse de Cupuaçu</h3>
+          <p>Mousse leve e cremoso feito com cupuaçu, fruta amazônica.</p>
+          <span class="preco">R$ 14.55</span>
+        </div>
+
+        <div class="card card-clicavel" data-titulo="Crème Brûlée"
+          data-descricao="Creme francês com casquinha de açúcar caramelizado." data-preco="23.90"
+          data-imagem="sobremesas/Crème Brûlée.jpg">
+          <img src="sobremesas/Crème Brûlée.jpg" alt="Crème Brûlée">
+          <h3>Crème Brûlée</h3>
+          <p>Creme francês com casquinha de açúcar caramelizado.</p>
+          <span class="preco">R$ 18.25</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O RESTAURANTE -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>
+        O Sabor Brasileiro nasceu da vontade de levar a culinária brasileira,
+        com toque amazônico, até a sua mesa. Trabalhamos com ingredientes
+        frescos e receitas que misturam tradição e criatividade, para que
+        você sinta o verdadeiro sabor do Brasil em cada prato.
+      </p>
+    </div>
+  </section>
+
+  <!-- MODAL (janela) DE DETALHES DO PRATO -->
+  <div class="modal" id="modal-prato">
+    <div class="modal-conteudo">
+
+      <button class="modal-fechar" id="modal-fechar">×</button>
+
+      <img id="modal-imagem" src="" alt="">
+
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-descricao"></p>
+      <span class="preco" id="modal-preco"></span>
+
+      <div class="modal-quantidade">
+        <button id="btn-menos">−</button>
+        <span id="quantidade-atual">1</span>
+        <button id="btn-mais">+</button>
+      </div>
+
+      <button class="botao botao-sacola" id="btn-adicionar-sacola">
+        Adicionar aos Pedidos
+      </button>
+
+    </div>
+  </div>
+
+  <!-- SEÇÃO DE BENEFÍCIOS / DIFERENCIAIS     -->
+
+  <section class="beneficios">
+    <div class="container">
+      <h2>Benefícios</h2>
+
+      <div class="grade-beneficios">
+
+        <div class="card-beneficio">
+          <div class="card-beneficio-icone">🚀</div>
+          <h3>Entrega Rápida</h3>
+          <p>Seu pedido chega quentinho em até 40 minutos.</p>
+        </div>
+
+        <div class="card-beneficio">
+          <div class="card-beneficio-icone">🌿</div>
+          <h3>Ingredientes Frescos</h3>
+          <p>Selecionamos os melhores ingredientes todos os dias.</p>
+        </div>
+
+        <div class="card-beneficio">
+          <div class="card-beneficio-icone">👨‍🍳</div>
+          <h3>Receitas Autênticas</h3>
+          <p>Pratos típicos brasileiros com toque amazônico.</p>
+        </div>
+
+        <div class="card-beneficio">
+          <div class="card-beneficio-icone">💳</div>
+          <h3>Pagamento Fácil</h3>
+          <p>Cartão, Pix ou dinheiro na entrega, você escolhe.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAMADA PARA AÇÃO (CTA)-->
+  <section class="cta">
+    <div class="container">
+      <h2>Está com fome?</h2>
+      <p>Faça seu pedido agora e receba em casa!</p><br>
+      <a href="sacola.html" class="botao botao-claro">Ver Meus Pedidos</a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="footer">
+    <div class="container">
+      <p>📞 (92) 999788-7895</p>
+      <p>📍 Rua das Palmeiras, 123 - Centro</p>
+      <p>&copy; 2026 Sabor Brasileiro. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+  <!-- Ligando com o arquivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
