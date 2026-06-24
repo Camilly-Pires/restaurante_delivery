@@ -652,7 +652,6 @@ Media queries: ajustam o layout para telas menores === */
 ========================================= */
 
 /* Tablets (telas até 900px) */
-
 @media (max-width: 900px) {
   .grade-cardapio {
     grid-template-columns: repeat(2, 1fr);
@@ -674,10 +673,19 @@ Media queries: ajustam o layout para telas menores === */
   .logoNome {
     font-size: 20px;
   }
+
+  .hero-imagem img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-texto h2 {
+    font-size: 30px;
+  }
 }
 
-/* Celulares (telas até 600px) */
-@media (max-width: 600px) {
+/* Celulares (telas até 900px, onde entra o hambúrguer) */
+@media (max-width: 900px) {
   .header-conteudo {
     flex-direction: column;
     align-items: center;
@@ -723,6 +731,15 @@ Media queries: ajustam o layout para telas menores === */
 
   .hero-texto h2 {
     font-size: 1.8rem;
+  }
+
+  .hero-texto p {
+    font-size: 17px;
+  }
+
+  .hero-imagem img {
+    width: 220px;
+    height: 220px;
   }
 
   .grade-cardapio {
