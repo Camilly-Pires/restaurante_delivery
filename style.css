@@ -60,7 +60,7 @@ a {
 /* === HEADER (logo + menu) === */
 .header {
   background-color: #2e5339;
-  padding: 16px 0;
+  padding: 25px;
 }
 
 .header-conteudo {
@@ -189,7 +189,7 @@ a {
 /* === HERO (seção principal/banner) === */
 .hero {
   background-color: #f7d27d;
-  padding: 80px 20px;
+  padding: 40px 10px;
 }
 
 .hero-conteudo {
@@ -306,13 +306,13 @@ a {
 }
 
 .card h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #2e5339;
   margin: 14px 14px 6px;
 }
 
 .card p {
-  font-size: 20px;
+  font-size: 16px;
   color: #090909;
   margin: 0 14px 12px;
 }
@@ -667,7 +667,7 @@ Media queries: ajustam o layout para telas menores === */
   }
 
   .hero-texto h2 {
-    font-size: 27px;
+    font-size: 22px;
   }
 }
 
